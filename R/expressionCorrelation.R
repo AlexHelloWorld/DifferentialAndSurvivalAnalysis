@@ -4,7 +4,7 @@ expressionCorrelationSingleGene <- function(gene1, matrix1, gene2, matrix2){
   gene1Expression <- unlist(matrix1[gene1, ])
   gene2Expression <- unlist(matrix2[gene2, ])
   
-  corTest <- cor.test(gene1Expression, gene2Expression, method = "pearson")
+  corTest <- cor.test(gene1Expression, gene2Expression, method = "spearman")
   c(corTest$estimate, corTest$p.value)
 }
 
